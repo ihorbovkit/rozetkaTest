@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost" uuid="ab4c8fd3-1212-4363-ab84-5ea2b445e487">
+    <database-info product="MySQL" version="5.5.5-10.1.16-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+      <schema id="1" name="db1">
+        <visible>1</visible>
+      </schema>
+      <schema id="2" name="information_schema"/>
+      <schema id="3" name="mysql"/>
+      <schema id="4" name="performance_schema"/>
+      <schema id="5" name="test"/>
+      <schema id="6" name="testdb"/>
+      <schema id="7" name="testdb1"/>
+      <schema id="8" name="test_results">
+        <visible>1</visible>
+      </schema>
+      <table id="9" parent="8" name="test_res"/>
+      <column id="10" parent="9" name="TestDate">
+        <data-type>datetime|0</data-type>
+      </column>
+      <column id="11" parent="9" name="ProductName">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <column id="12" parent="9" name="ProductPrice">
+        <data-type>varchar(255)|0</data-type>
+      </column>
+      <trigger id="13" parent="9" name="triggername">
+        <trig-events>I</trig-events>
+        <trig-turn>BEFORE_ROW</trig-turn>
+      </trigger>
+    </database-model>
+  </data-source>
+</component>
