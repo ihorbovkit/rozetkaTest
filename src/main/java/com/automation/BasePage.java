@@ -12,10 +12,10 @@ import org.testng.Assert;
  */
 
 public class BasePage {
-    public WebDriver driver;
-    public String PAGE_URL;
-    public String PAGE_TITTLE;
-    public WebDriverWait wait;
+    private WebDriver driver;
+    protected String PAGE_URL;
+    protected String PAGE_TITTLE;
+    private WebDriverWait wait;
 
     public BasePage(WebDriver driver){
         this.driver = driver;
@@ -33,16 +33,11 @@ public class BasePage {
 
     }
 
-    public void sendElementText (WebElement element, String text){
-        element.clear();
-        element.sendKeys(text);
-        Assert.assertEquals(element.getAttribute("value"), text);
-    }
-
     public void selectElementDropdown(WebElement dropdown, String value){
         Select select= new Select(dropdown);
         select.selectByValue(value);
     }
+
     public String getPAGE_URL() {
         return PAGE_URL;
     }
