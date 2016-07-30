@@ -4,6 +4,7 @@ import junitx.util.PropertyManager;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -44,7 +45,9 @@ public class DriverFactory {
             case FIREFOX:
                 return new FirefoxDriver();
             case CHROME:
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
+                ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("start-maximized");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver");
                 return new ChromeDriver();
             case SAFARI:
                 return new FirefoxDriver();

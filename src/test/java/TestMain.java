@@ -19,12 +19,14 @@ public class TestMain  {
 
     public static void main(String args[]) {
         RozetkaSmartphonesPage smartPage;
+
         WebDriver driver;
         driver = new FirefoxDriver();
         driver.get("http://rozetka.com.ua/mobile-phones/c80003/filter/preset=smartfon;sort=popularity/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         smartPage= PageFactory.initElements(driver, RozetkaSmartphonesPage.class);
         smartPage.putElementsToMap();
+
         for (Map.Entry<String, String> entry : smartPage.getTopSmart().entrySet()) {
             System.out.println(entry);
         }

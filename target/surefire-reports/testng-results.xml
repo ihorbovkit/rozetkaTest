@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RozetkaTestTopSmartphones" duration-ms="62616" started-at="2016-07-30T13:35:00Z" finished-at="2016-07-30T13:36:03Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="62616" started-at="2016-07-30T13:35:00Z" finished-at="2016-07-30T13:36:03Z">
+      <class name="RozetkaTestTopSmartphones">
+        <test-method status="PASS" signature="setup()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="setup" is-config="true" duration-ms="8912" started-at="2016-07-30T16:35:00Z" finished-at="2016-07-30T16:35:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="loadPage()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="loadPage" duration-ms="9864" started-at="2016-07-30T16:35:09Z" finished-at="2016-07-30T16:35:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadPage -->
+        <test-method status="PASS" signature="navigateToSmartphones()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="navigateToSmartphones" duration-ms="39392" started-at="2016-07-30T16:35:19Z" depends-on-methods="RozetkaTestTopSmartphones.loadPage" finished-at="2016-07-30T16:35:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToSmartphones -->
+        <test-method status="PASS" signature="writeTopSmartphonesToDB()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="writeTopSmartphonesToDB" duration-ms="3716" started-at="2016-07-30T16:35:58Z" depends-on-methods="RozetkaTestTopSmartphones.navigateToSmartphones" finished-at="2016-07-30T16:36:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeTopSmartphonesToDB -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="teardown" is-config="true" duration-ms="716" started-at="2016-07-30T16:36:02Z" finished-at="2016-07-30T16:36:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:RozetkaTestTopSmartphones@305f8ddb]" name="afterSuite" is-config="true" duration-ms="1" started-at="2016-07-30T16:36:03Z" finished-at="2016-07-30T16:36:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- RozetkaTestTopSmartphones -->
+    </test> <!-- Command line test -->
+  </suite> <!-- RozetkaTestTopSmartphones -->
+</testng-results>

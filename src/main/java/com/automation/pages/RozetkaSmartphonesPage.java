@@ -1,6 +1,7 @@
 package com.automation.pages;
 
 import com.automation.BasePage;
+import com.automation.utilities.MyWaits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.automation.utilities.DbHelper.insertRecordIntoTable;
+import static com.automation.utilities.MyWaits.waitForPageLoad;
 
 /**
  * Created by kolodiy on 7/27/16.
@@ -23,7 +25,10 @@ public class RozetkaSmartphonesPage extends BasePage {
     @FindBy(xpath = "//*[contains(@class, 'g-tag  g-tag-icon-middle-popularity sprite')]/../../..//*[@class='g-i-tile-i-title clearfix']")
     List<WebElement> smartphoneTop_name;
 
-    @FindBy(id = "sort_view") WebElement dropdown_Sort;
+    @FindBy (xpath = ".//h1") WebElement smartphonesHeader;
+
+    @FindBy(xpath = "//*[@id=\"sort_view\"]/div/ul/li[3]") WebElement dropdown_Top;
+    @FindBy(xpath = "//*[@id=\"sort_view\"]/a") WebElement dropdown_Sort;
 
 
     public List<WebElement> getSmartphonesTop_price() {
@@ -61,11 +66,17 @@ public class RozetkaSmartphonesPage extends BasePage {
     }
 
     public void writeToDb() throws SQLException {
+
         insertRecordIntoTable(smartphoneTop_name, smartphonesTop_price);
     }
 
     public void selectTopSort(){
-        selectElementDropdown(dropdown_Sort, "популярные" );
+
+        wait.until(MyWaits.visibilityOfElement(dropdown_Sort));
+        clickElement(dropdown_Sort);
+        clickElement(dropdown_Top);
+        waitForPageLoad(driver);
+        takeScreenshotAshot(driver);
     }
 }
 

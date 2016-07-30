@@ -1,10 +1,8 @@
 package com.automation.utilities;
 
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by kolodiy on 7/22/16.
@@ -24,6 +22,16 @@ public class MyWaits {
             }
         };
     }
+    public static void waitForPageLoad(WebDriver driver) {
+        ExpectedCondition<Boolean> pageLoadCondition = new
+                ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                    }
+                };
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(pageLoadCondition);
+    }
 
     public static ExpectedCondition<Boolean> wait(final Boolean condition){
         return new ExpectedCondition<Boolean>() {
@@ -33,4 +41,7 @@ public class MyWaits {
             }
         };
     }
+
+
+
 }

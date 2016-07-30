@@ -2,6 +2,7 @@ package com.automation.pages;
 
 
 import com.automation.BasePage;
+import com.automation.utilities.MyWaits;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,7 @@ public class RozetkaMainPage extends BasePage {
     }
 
     public void clickPhoneTVCategory(){
+        wait.until(MyWaits.visibilityOfElement(link_PhoneTVMain));
         clickElement(link_PhoneTVMain);
     }
 

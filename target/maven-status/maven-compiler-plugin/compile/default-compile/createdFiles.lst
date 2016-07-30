@@ -1,0 +1,15 @@
+com/automation/BasePage.class
+com/automation/utilities/MyWaits$2.class
+com/automation/utilities/DriverFactory$BrowserType.class
+com/automation/utilities/DriverFactory$1.class
+com/automation/utilities/MyWaits.class
+com/automation/pages/RozetkaPhonesTVGeneralPage.class
+com/automation/pages/RozetkaPhonesPage.class
+com/automation/utilities/DbHelper.class
+com/automation/pages/RozetkaMainPage.class
+com/automation/utilities/MyWaits$3.class
+com/automation/pages/RozetkaSmartphonesPage.class
+com/automation/utilities/MyTestResults.class
+com/automation/utilities/MyTestListener.class
+com/automation/utilities/MyWaits$1.class
+com/automation/utilities/DriverFactory.class

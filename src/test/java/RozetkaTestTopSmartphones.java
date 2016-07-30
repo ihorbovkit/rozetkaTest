@@ -26,6 +26,7 @@ public class RozetkaTestTopSmartphones {
     RozetkaSmartphonesPage rozetkaSmartphonesPage;
     public WebDriver driver;
 
+    @Parameters({"browserType"})
     @BeforeClass(alwaysRun = true)
     public void setup() throws Exception {
 
@@ -49,6 +50,7 @@ public class RozetkaTestTopSmartphones {
 
     @Test(dependsOnMethods = "loadPage")
     public void navigateToSmartphones() {
+        driver.manage().deleteAllCookies();
         rozetkaMainPage.clickPhoneTVCategory();
         rozetkaPhonesTVGeneralPage.clickPhoneCategory();
         rozetkaPhonesPage.clickLinkSmartphones();
